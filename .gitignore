@@ -4,3 +4,8 @@
 .httr-oauth
 .DS_Store
 .quarto
+/index_files
+/metadata_files
+/metadata_html
+/index_html
+/.quarto/
