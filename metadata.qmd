@@ -1,0 +1,14 @@
+---
+title: Diamonds metadata
+---
+
+```{r}
+library(ggplot2)
+library(labelled)
+library(gt)
+str(diamonds)
+
+generate_dictionary(diamonds) |>
+  gt()
+```
+

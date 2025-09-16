@@ -19,3 +19,5 @@ ggplot(diamonds, aes(x = carat, y = price)) +
        y = "Price (USD)")
 ```
 
+[Diamonds metadata is here](metadata.html).
+

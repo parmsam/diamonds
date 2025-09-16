@@ -1,7 +1,6 @@
 name: render.yaml
 on:
-  push:
-    branches: main
+  workflow_dispatch
 permissions:
   contents: write
 jobs:
@@ -22,9 +21,13 @@ jobs:
       # Install quarto
       - uses: quarto-dev/quarto-actions/setup@v2
 
-      # Render the quarto file into html/
+      # Render the primary quarto file into html/
       - name: Render
         run: quarto render index.qmd --output-dir=html
+
+      # Render the secondary quarto file into html/
+      - name: Render
+        run: quarto render metadata.qmd --output-dir=html
 
       # Publish html/ to GitHub pages
       - name: Publish to GitHub pages 🚀
