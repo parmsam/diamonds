@@ -1,0 +1,21 @@
+---
+title: "Shiny bright like a diamond"
+subtitle: Sam Parmar
+date: "`r Sys.Date()`"
+format: html
+editor: visual
+---
+
+## Plot diamonds dataset
+
+Here's a plot of the `diamonds` dataset using `ggplot2`:
+
+```{r}
+library(ggplot2)
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point() +
+  labs(title = "Scatter plot of Diamond Price vs Carat",
+       x = "Carat",
+       y = "Price (USD)")
+```
+
